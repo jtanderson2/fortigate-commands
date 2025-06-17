@@ -59,3 +59,18 @@ config firewall policy
         set nat enable
     next
 
+# example fqdn object and groups
+
+config firewall address
+    edit "Microsoft_Office365"
+        set type fqdn
+        set fqdn "office365.com"
+    next
+
+config firewall addrgrp
+    edit "External_Destinations"
+        set member "Microsoft_Office365"
+    next
+end
+
+
