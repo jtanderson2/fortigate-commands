@@ -1,9 +1,83 @@
+# disable and reset current debug
 diagnose debug disable
 diagnose debug reset
+
+# run debug flow
 diagnose debug flow filter addr 8.8.8.8
 diagnose debug flow trace start 100
 diagnose debug flow show iprope enable
 diagnose debug flow show function-name enable
 diagnose debug enable
-#
+
+# stop trace
 diagnose debug flow trace stop
+
+# more filter options
+
+diagnose debug flow filter addr 8.8.8.8 9.9.9.9
+
+diagnose debug flow filter
+        vf: any
+        proto: any
+        host addr: 8.8.8.8-9.9.9.9
+        Host saddr: any
+        Host daddr: any
+        port: any
+        sport: any
+        dport: any
+
+#
+
+diagnose debug flow filter addr 8.8.8.8 7.7.7.7 or
+
+diagnose debug flow filter 
+        vf: any
+        proto: any
+        host addr: 8.8.8.8 or 7.7.7.7
+        Host saddr: any
+        Host daddr: any
+        port: any
+        sport: any
+        dport: any
+
+#		
+		
+diagnose debug flow filter addr 8.8.8.8 9.9.9.9 and
+
+diagnose debug flow filter
+        vf: any
+        proto: any
+        host addr: 8.8.8.8 and 9.9.9.9
+        Host saddr: any
+        Host daddr: any
+        port: any
+        sport: any
+        dport: any
+		
+#
+
+diagnose debug flow filter dport 443
+
+diagnose debug flow filter 
+        vf: any
+        proto: any
+        host addr: 8.8.8.8 and 9.9.9.9
+        Host saddr: any
+        Host daddr: any
+        port: any
+        sport: any
+        dport: 443-443
+
+#
+
+diagnose debug flow filter sport 1234
+
+diagnose debug flow filter
+        vf: any
+        proto: any
+        host addr: 8.8.8.8 and 9.9.9.9
+        Host saddr: any
+        Host daddr: any
+        port: any
+        sport: 1234-1234
+        dport: 443-443
