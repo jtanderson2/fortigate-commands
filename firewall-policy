@@ -19,3 +19,43 @@ config firewall policy
         set logtraffic all
         set nat enable
     next
+
+# example with address objects and groups
+
+config firewall address
+    edit "LAN_Subnet"
+        set subnet 192.168.1.0 255.255.255.0
+    next
+    edit "Web_Servers"
+        set type iprange
+        set start-ip 10.0.0.10
+        set end-ip 10.0.0.20
+    next
+end
+
+config firewall addrgrp
+    edit "Internal_Sources"
+        set member "LAN_Subnet" "Web_Servers"
+    next
+end
+
+config firewall policy
+    edit 1
+        set name "Allow_Internal_To_Internet"
+        set srcintf "port2"
+        set dstintf "port3"
+        set action accept
+        set srcaddr "Internal_Sources"
+        set dstaddr "all"
+        set schedule "always"
+        set service "DNS" "HTTP" "HTTPS" "NTP" "PING"
+        set utm-status enable
+        set ssl-ssh-profile "certificate-inspection"
+        set av-profile "default"
+        set webfilter-profile "default"
+	set dnsfilter-profile "default"
+        set ips-sensor "default"
+        set logtraffic all
+        set nat enable
+    next
+
