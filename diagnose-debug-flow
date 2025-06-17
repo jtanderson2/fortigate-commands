@@ -1,0 +1,9 @@
+diagnose debug disable
+diagnose debug reset
+diagnose debug flow filter addr 8.8.8.8
+diagnose debug flow trace start 100
+diagnose debug flow show iprope enable
+diagnose debug flow show function-name enable
+diagnose debug enable
+#
+diagnose debug flow trace stop
