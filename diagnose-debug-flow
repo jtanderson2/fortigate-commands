@@ -12,10 +12,8 @@ diagnose debug enable
 # stop trace
 diagnose debug flow trace stop
 
-# more filter options
-
+# filter example1
 diagnose debug flow filter addr 8.8.8.8 9.9.9.9
-
 diagnose debug flow filter
         vf: any
         proto: any
@@ -26,10 +24,8 @@ diagnose debug flow filter
         sport: any
         dport: any
 
-#
-
+# filter example2
 diagnose debug flow filter addr 8.8.8.8 7.7.7.7 or
-
 diagnose debug flow filter 
         vf: any
         proto: any
@@ -40,10 +36,8 @@ diagnose debug flow filter
         sport: any
         dport: any
 
-#		
-		
+# filter example3		
 diagnose debug flow filter addr 8.8.8.8 9.9.9.9 and
-
 diagnose debug flow filter
         vf: any
         proto: any
@@ -54,10 +48,8 @@ diagnose debug flow filter
         sport: any
         dport: any
 		
-#
-
+# filter example4
 diagnose debug flow filter dport 443
-
 diagnose debug flow filter 
         vf: any
         proto: any
@@ -68,10 +60,8 @@ diagnose debug flow filter
         sport: any
         dport: 443-443
 
-#
-
+# filter example5
 diagnose debug flow filter sport 1234
-
 diagnose debug flow filter
         vf: any
         proto: any
