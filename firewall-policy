@@ -1,0 +1,21 @@
+# basic internet out with utm features
+
+config firewall policy
+    edit 1
+        set name "PERMIT-WWW-OUT"
+        set srcintf "port2"
+        set dstintf "port3"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "DNS" "HTTP" "HTTPS" "NTP" "PING"
+        set utm-status enable
+        set ssl-ssh-profile "certificate-inspection"
+        set av-profile "default"
+        set webfilter-profile "default"
+	      set dnsfilter-profile "default"
+        set ips-sensor "default"
+        set logtraffic all
+        set nat enable
+    next
