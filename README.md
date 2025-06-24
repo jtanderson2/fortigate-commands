@@ -1,2 +1,2 @@
 # fortigate-commands
-Commonly used Fortigate CLI commands/scripts
+Commonly used Fortigate CLI commands and config snippets
