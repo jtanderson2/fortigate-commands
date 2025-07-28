@@ -5,8 +5,6 @@ diagnose debug reset
 # run debug flow
 diagnose debug flow filter addr 8.8.8.8
 diagnose debug flow trace start 100
-diagnose debug flow show iprope enable
-diagnose debug flow show function-name enable
 diagnose debug enable
 
 # stop trace
