@@ -1,7 +1,7 @@
 # configure mgmt interface
 config system interface
 edit port1
-set allowaccess http https ping ssh
+set allowaccess https ping ssh
 set mode static
 set ip 10.10.10.10 255.255.255.0
 end
