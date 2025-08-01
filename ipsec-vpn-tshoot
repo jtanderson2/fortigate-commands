@@ -1,0 +1,21 @@
+# add explanations...
+
+get vpn ipsec tunnel summary 
+
+show vpn ipsec phase1-interface
+show vpn ipsec phase2-interface
+
+diagnose vpn tunnel list
+diagnose vpn ike gateway list
+get vpn ike gateway
+
+diagnose debug reset 
+diagnose debug disable
+diagnose vpn ike log filter
+diagnose vpn ike log filter clear
+diagnose vpn ike log filter loc-addr4 <local-ip>
+diagnose vpn ike log filter rem-addr4 <remote-ip>
+diagnose debug application ike -1
+diagnose debug enable
+
+diagnose sniffer packet any "host 100.64.16.1 and (port 500 or port 4500)"
