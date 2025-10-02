@@ -14,7 +14,7 @@ config firewall policy
         set ssl-ssh-profile "certificate-inspection"
         set av-profile "default"
         set webfilter-profile "default"
-	set dnsfilter-profile "default"
+		set dnsfilter-profile "default"
         set ips-sensor "default"
         set logtraffic all
         set nat enable
@@ -53,7 +53,7 @@ config firewall policy
         set ssl-ssh-profile "certificate-inspection"
         set av-profile "default"
         set webfilter-profile "default"
-	set dnsfilter-profile "default"
+		set dnsfilter-profile "default"
         set ips-sensor "default"
         set logtraffic all
         set nat enable
