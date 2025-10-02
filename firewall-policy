@@ -19,6 +19,7 @@ config firewall policy
         set logtraffic all
         set nat enable
     next
+end
 
 # example with address objects and groups
 
@@ -58,6 +59,7 @@ config firewall policy
         set logtraffic all
         set nat enable
     next
+end
 
 # example fqdn object and groups
 
